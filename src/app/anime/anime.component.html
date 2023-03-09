@@ -1,0 +1,44 @@
+<div style="width: auto; height: 70px;">
+    <h1 class="slide-in-blurred-top">AnimeList</h1>
+    <hr>
+</div>
+<button type="button" class="btn btn-primary" (click)="openModal()" style="float:right">Add Anime</button>
+<ng-container>
+  <div>
+    <tabset>
+      <tab *ngFor="let anime of AnimeOfPage" heading="{{anime.titleEN}}" id="tab1">
+        <div>
+          <div style="margin-top:20px; background-color: black; width: 50%;">
+            <h2 class="tracking-in-expand" style="color: white;">{{anime.titleEN}}</h2>
+            <p style="color: white;">{{anime.titleJP}}</p>
+          </div>
+          <div style="width:50%; margin-top: -20px">
+            <img  class="slide-bottom" [src]="anime.image" style="float:left; max-width: 100%; border-radius: 0 0 50px 50px;">
+          </div>
+          <div style="width:30%;float:right; text-align: center; margin-top: 10%; margin-right: 10%;">
+            <p class="scale-in-ver-center">{{anime.description}}</p>
+              <div style="margin-top:50px;">
+                <hr style="width:80%; margin-bottom: 20px; margin-left:10%">
+                <hr style="width:50%; margin-top: 10px;margin-left:25%">
+            </div>
+          </div>  
+        
+        </div>
+    </tab>
+      
+    </tabset>
+  </div>
+</ng-container>
+
+ 
+<!-- <ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template> -->

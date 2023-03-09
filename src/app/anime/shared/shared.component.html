@@ -1,0 +1,30 @@
+<form [formGroup]="myForm" data-toggle="validator" role="form" style="padding:20px 80px 0px 80px;">
+	<div class="form-group">
+		<label  class="control-label">Title in Japanese</label>
+		<input formControlName="titleJP" type="text" class="form-control" id="inputName" placeholder="僕ぼくのヒーローアカデミア" >
+  </div>
+		<div class="form-group">
+			<label for="titleEN" class="control-label">Title in English</label>
+			<input formControlName="titleEN" type="text" class="form-control" id="lastName" placeholder="My Hero Academia" required>
+  </div>
+
+    <div class="form-group">
+        <label for="imageLink" class="control-label">Image for Anime (link)</label>
+        <input formControlName="imageLink" type="text" class="form-control" id="lastName" placeholder="My Hero Academia" required>
+    </div>
+
+    <div class="form-group">
+        <label for="description" class="control-label">Description</label>
+        <input formControlName="description" type="text" class="form-control" id="lastName" placeholder="My Hero Academia" required>
+    </div>
+
+
+  <div>
+      <button (click)="onSubmit()" type="button" class="btn btn-primary" style="margin-top:20px">
+        Add
+      </button>
+      
+  </div>
+			
+</form>
+
